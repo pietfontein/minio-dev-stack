@@ -1,0 +1,60 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "MinIO: Start",
+      "type": "shell",
+      "command": "docker compose up -d",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "MinIO: Stop",
+      "type": "shell", 
+      "command": "docker compose down",
+      "group": "build"
+    },
+    {
+      "label": "MinIO: Stop and Clean",
+      "type": "shell",
+      "command": "docker compose down -v",
+      "group": "build"
+    },
+    {
+      "label": "MinIO: Logs",
+      "type": "shell",
+      "command": "docker compose logs -f",
+      "group": "none",
+      "presentation": {
+        "panel": "new"
+      }
+    },
+    {
+      "label": "MinIO: MC Shell",
+      "type": "shell",
+      "command": "docker compose exec mc sh",
+      "group": "none",
+      "presentation": {
+        "panel": "new"
+      }
+    },
+    {
+      "label": "MinIO: Status",
+      "type": "shell",
+      "command": "docker compose ps",
+      "group": "none"
+    },
+    {
+      "label": "MinIO: Restart",
+      "type": "shell",
+      "command": "docker compose restart",
+      "group": "build"
+    },
+    {
+      "label": "MinIO: Build and Start",
+      "type": "shell",
+      "command": "docker compose up -d --build",
+      "group": "build"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# Docker volumes
+minio-data/
+mc-data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Sensitive data
+*.env
+credentials.txt
+*.key
+*.pem
+
+# Temporary files
+.DS_Store
+Thumbs.db
